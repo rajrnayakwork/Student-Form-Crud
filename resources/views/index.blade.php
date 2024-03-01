@@ -39,6 +39,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('calculate_numbers') }}">Calculate Numbers</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('view_student') }}">View Student</a>
+                    </li>
                 </ul>
             </div>
         </div>

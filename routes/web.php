@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CalculateController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,15 @@ Route::get('/contact-us/{name}',[UserController::class,'contactUsGetName'])->nam
 Route::get('/calculate/{answer?}',[CalculateController::class,'calculateNumbers'])->name('calculate_numbers');
 
 Route::post('/calculate',[CalculateController::class,'calculate'])->name('calculate');
+
+Route::get('/student',[StudentController::class,'viewStudent'])->name('view_student');
+
+Route::get('/add-student',[StudentController::class,'addStudent'])->name('add_student');
+
+Route::post('/add-student',[StudentController::class,'insertStudent'])->name('insert_student');
+
+Route::get('/delete-student/{id}',[StudentController::class,'deleteStudent'])->name('delete_student');
+
+Route::get('/edit_student/{id}',[StudentController::class,'editStudent'])->name('edit_student');
+
+Route::post('/edit_student',[StudentController::class,'updateStudent'])->name('update_student');

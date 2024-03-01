@@ -27,7 +27,8 @@ class CalculateController extends Controller
             else if ($method == 'div') {
                 $answer = $number1 / $number2;
             }
-            return redirect()->route('calculate_numbers',[$answer]);
+            return $this->calculateNumbers($answer);
+            // return redirect()->route('calculate_numbers',[$answer]);
         }else{
             return redirect()->route('calculate_numbers');
         }
